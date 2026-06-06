@@ -125,7 +125,7 @@ onMounted(() => {
           រឿងកំពុងពេញនិយមថ្មីៗ
         </div>
         <div class="view-all fontKH">
-          <router-link class="text-white text-sm" to="">មើលទាំងអស់ <i class="bi bi-chevron-right"></i></router-link>
+          <router-link to="/browse" class="text-white text-sm">មើលទាំងអស់ <i class="bi bi-chevron-right"></i></router-link>
         </div>
       </div>
 

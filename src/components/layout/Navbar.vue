@@ -67,7 +67,10 @@ const openSidebar = () => {
 
       <!-- menu mobile -->
       <div class="lg:hidden">
-        <button class="cursor-pointer" @click="openSidebar">
+        <button v-if="isOpen" class="cursor-pointer" @click="openSidebar">
+          <i class="bi text-2xl text-white bi-x-lg"></i>
+        </button>
+        <button v-else class="cursor-pointer" @click="openSidebar">
           <i class="bi text-2xl text-white bi-list"></i>
         </button>
       </div>
