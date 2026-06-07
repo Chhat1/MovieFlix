@@ -27,7 +27,7 @@ const filterMovie = computed(() => {
 
     <!-- TITLE -->
     <div class="header-title text-start lg:px-35 lg:py-5 px-5 pt-10">
-      <h1 class="text-white fontKH text-sm lg:text-xl">រឿងទាំងអស់</h1>
+      <h1 class="text-white fontKH text-sm lg:text-md">រឿងទាំងអស់</h1>
     </div>
 
     <!-- FILTER SECTION -->
@@ -59,7 +59,7 @@ const filterMovie = computed(() => {
       <div
         v-for="item in filterMovie"
         :key="item.id"
-        class="group relative lg:w-[23%] md:w-[48%] w-[48%]  shrink-0 rounded-2xl overflow-hidden cursor-pointer bg-slate-900 border border-gray-700 shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-orange-600 mb-5"
+        class="group relative lg:w-[23%] md:w-[48%] w-[48%]   shrink-0 rounded-2xl overflow-hidden cursor-pointer bg-slate-900 border border-gray-700 shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-orange-600 mb-5"
       >
         <!-- IMAGE -->
         <div class="relative aspect-2/3 overflow-hidden">

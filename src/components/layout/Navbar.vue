@@ -78,7 +78,9 @@ const openSidebar = () => {
   </header>
 
   <!-- sidebar -->
-  <div v-if="isOpen" class="h-45 border-b border-b-slate-900 transition-all ease-in-out bg-black px-2 py-3">
+
+  <div v-if="isOpen" class="h-45 border-b border-b-slate-900  bg-black px-2 py-3">
+
     <!-- search box -->
     <div class="search relative lg:hidden mb-4">
       <input

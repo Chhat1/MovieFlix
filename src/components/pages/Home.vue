@@ -88,17 +88,17 @@ onMounted(() => {
 
           <!-- Buttons -->
           <div class="flex gap-4 mt-8">
-            <button
+            <router-link to="/browse"
               class="bg-orange-600 cursor-pointer fontKH hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition"
             >
               <i class="bi bi-caret-right-fill"></i> មើលឥឡូវនេះ
-            </button>
+            </router-link>
 
-            <button
+            <router-link to="/details"
               class="border cursor-pointer fontKH border-white text-white hover:bg-white hover:text-black px-6 py-3 rounded-lg font-medium transition"
             >
               <i class="bi bi-info-circle"></i> លម្អិត
-            </button>
+            </router-link>
           </div>
         </div>
       </div>
@@ -119,14 +119,14 @@ onMounted(() => {
       </button>
     </section>
 
-    <div class="product-tranding container  mx-auto py-10">
+    <div class="product-tranding container  mx-auto py-0">
       <!-- header -->
       <div class="header flex justify-between items-center lg:px-0 px-5 py-5">
         <div class="header-title fontKH text-white lg:text-md text-sm">
           រឿងកំពុងពេញនិយមថ្មីៗ
         </div>
         <div class="view-all fontKH">
-          <router-link to="/browse" class="text-white text-sm">មើលទាំងអស់ <i class="bi bi-chevron-right"></i></router-link>
+          <router-link to="/browse" class="text-white text-sm hover:text-orange-600 transition-all duration-300 ease-in-out">មើលទាំងអស់ <i class="bi bi-chevron-right"></i></router-link>
         </div>
       </div>
 
@@ -134,7 +134,7 @@ onMounted(() => {
       <div class="overflow-x-auto scrollbar-none w-full">
         <div class="main-product lg:mt-5 mt-1 px-5 lg:px-0 flex w-max gap-5">
           <div
-            v-for="item in productStore.products.slice(0, 8)"
+            v-for="item in productStore.products"
             :key="item.id"
             class="group relative w-40 md:w-56 shrink-0 rounded-2xl overflow-hidden cursor-pointer bg-slate-900 border border-gray-500 shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-orange-600"
           >
@@ -190,14 +190,14 @@ onMounted(() => {
       </div>
     </div>
 
-    <div class="product-tranding container py-10 mx-auto">
+    <div class="product-tranding container pt-5 pb-10 mx-auto">
       <!-- header -->
       <div class="header flex justify-between items-center lg:px-0 px-5 py-5">
         <div class="header-title fontKH text-white lg:text-md text-sm">
           រឿងថ្មីៗ
         </div>
         <div class="view-all fontKH">
-          <router-link to="/browse" class="text-white text-sm">មើលទាំងអស់ <i class="bi bi-chevron-right"></i></router-link>
+          <router-link to="/browse" class="text-white text-sm hover:text-orange-600 transition-all duration-300 ease-in-out">មើលទាំងអស់ <i class="bi bi-chevron-right"></i></router-link>
         </div>
       </div>
 

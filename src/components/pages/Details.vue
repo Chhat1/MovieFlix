@@ -3,7 +3,7 @@
 
 
 <template>
-    <div class="pageListMoive bg-black">
+    <div class="pageDetailaboutmovie bg-black">
         <div class="container mx-auto h-screen bg-red-500">
 
         </div>
