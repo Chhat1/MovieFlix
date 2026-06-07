@@ -2,7 +2,7 @@ export const movies = [
     {
         id: 1,
         title: "Inception",
-        image: "/public/images/Inception.jpg", // Inception Poster
+        image: "images/Inception.jpg", // Inception Poster
         rating: 8.8,
         category: "Sci-Fi",
         release_date: "2010-07-16",
@@ -13,7 +13,7 @@ export const movies = [
     {
         id: 2,
         title: "Interstellar",
-        image: "/public/images/Interstellar.jpg", // Interstellar Poster
+        image: "images/Interstellar.jpg", // Interstellar Poster
         rating: 8.7,
         category: "Sci-Fi",
         release_date: "2014-11-07",
@@ -24,7 +24,7 @@ export const movies = [
     {
         id: 3,
         title: "The Dark Knight",
-        image: "/public/images/The Dark Knight.jpg", // Dark Knight Poster
+        image: "images/The Dark Knight.jpg", // Dark Knight Poster
         rating: 9.0,
         category: "Action",
         release_date: "2008-07-18",
@@ -35,7 +35,7 @@ export const movies = [
     {
         id: 4,
         title: "The Lion King",
-        image: "/public/images/The Lion King.jpg", // Lion King Poster
+        image: "images/The Lion King.jpg", // Lion King Poster
         rating: 8.5,
         category: "Animation",
         release_date: "1994-06-15",
@@ -46,7 +46,7 @@ export const movies = [
     {
         id: 5,
         title: "Joker",
-        image: "/public/images/Joker.jpg", // Joker Poster
+        image: "images/Joker.jpg", // Joker Poster
         rating: 8.1,
         category: "Drama",
         release_date: "2019-10-04",
@@ -57,7 +57,7 @@ export const movies = [
     {
         id: 6,
         title: "Avatar",
-        image: "/public/images/Avatar.jpg",
+        image: "images/Avatar.jpg",
         rating: 7.6,
         category: "Sci-Fi",
         release_date: "2009-12-18",
@@ -68,7 +68,7 @@ export const movies = [
     {
         id: 7,
         title: "Titanic",
-        image: "/public/images/Titanic.png",
+        image: "images/Titanic.png",
         rating: 7.9,
         category: "Romance",
         release_date: "1997-12-19",
@@ -79,7 +79,7 @@ export const movies = [
     {
         id: 8,
         title: "The Matrix",
-        image: "/public/images/The Matrix.jpg",
+        image: "images/The Matrix.jpg",
         rating: 8.2,
         category: "Action",
         release_date: "1999-03-31",
