@@ -2,6 +2,7 @@
 import { computed, ref } from "vue";
 import { movies } from "../../api/movies";
 
+
 // selected category
 const selectedCategory = ref("All");
 
@@ -20,6 +21,10 @@ const filterMovie = computed(() => {
     (movie) => movie.category === selectedCategory.value
   );
 });
+
+
+
+
 </script>
 
 <template>
@@ -30,6 +35,9 @@ const filterMovie = computed(() => {
       <h1 class="text-white fontKH text-sm lg:text-md">រឿងទាំងអស់</h1>
     </div>
 
+
+  
+      
     <!-- FILTER SECTION -->
     <div class="filter-category container mx-auto pt-6 px-5  overflow-scroll scrollbar-none lg:py-0 py-5">
       <div class="lg:flex lg:gap-2 lg:flex-wrap flex w-max gap-4 ">
@@ -49,6 +57,9 @@ const filterMovie = computed(() => {
         </button>
       </div>
     </div>
+
+      
+
 
     
 
@@ -79,7 +90,7 @@ const filterMovie = computed(() => {
           <div
             class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
-            <div
+            <router-link :to="`/details/${item.id}`"
               class="w-12 h-12 rounded-full bg-orange-600 flex items-center justify-center shadow-lg"
             >
               <svg
@@ -89,7 +100,18 @@ const filterMovie = computed(() => {
               >
                 <path d="M8 5v14l11-7z" />
               </svg>
-            </div>
+            </router-link>
+
+
+            <router-link class="absolute lg:hidden text-white bg-red-600 px-1 rounded text-sm" to="">
+              <svg
+                class="w-6 h-6 text-white ml-1"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </router-link>
           </div>
         </div>
 
@@ -109,6 +131,7 @@ const filterMovie = computed(() => {
             >
               {{ item.rating }} <i class="bi bi-star-fill text-yellow-500"></i>
             </span>
+            
           </div>
         </div>
       </div>
@@ -118,7 +141,5 @@ const filterMovie = computed(() => {
 </template>
 
 <style scoped>
-.fontKH {
-  font-family: khmer OS battambang;
-}
+
 </style>

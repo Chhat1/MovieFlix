@@ -236,6 +236,8 @@ onMounted(() => {
                   </svg>
                 </div>
               </div>
+
+              
             </div>
 
             <div class="p-4">
@@ -260,11 +262,10 @@ onMounted(() => {
         </div>
       </div>
     </div>
+    
   </div>
 </template>
 
 <style scoped>
-.fontKH {
-  font-family: khmer OS battambang;
-}
+
 </style>

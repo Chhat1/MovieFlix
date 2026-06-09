@@ -1,11 +1,14 @@
 <script setup>
-import { ref } from "vue";
+import { ref} from "vue";
+import { movies } from "../../api/movies";
 
 const isOpen = ref(false);
 
 const openSidebar = () => {
   isOpen.value = !isOpen.value;
 };
+
+
 </script>
 
 <template>
@@ -77,10 +80,14 @@ const openSidebar = () => {
     </nav>
   </header>
 
+ 
+
   <!-- sidebar -->
 
-  <div v-if="isOpen" class="h-45 border-b border-b-slate-900  bg-black px-2 py-3">
-
+  <div
+    v-if="isOpen"
+    class="h-45 border-b border-b-slate-900 bg-black px-2 py-3"
+  >
     <!-- search box -->
     <div class="search relative lg:hidden mb-4">
       <input
@@ -97,7 +104,7 @@ const openSidebar = () => {
       </router-link>
     </div>
     <div class="menu flex justify-end">
-      <ul class="menu-links flex-column  gap-5">
+      <ul class="menu-links flex-column gap-5">
         <li class="mb-3">
           <router-link
             class="link text-gray-300 text-sm transition-all duration-300 hover:text-orange-600 cursor-pointer"
