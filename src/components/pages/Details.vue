@@ -66,7 +66,8 @@ onMounted(() => {
         </button>
       </div>
     </div>
-    <div class="product-tranding container pt-5 pb-10 mx-auto">
+  </div>
+  <div class="product-tranding container bg-black pt-5 pb-10 mx-auto">
       <!-- header -->
       <div class="header flex justify-between items-center lg:px-0 px-5 py-5">
         <div class="header-title fontKH text-white lg:text-md text-sm">
@@ -139,8 +140,7 @@ onMounted(() => {
           </div>
         </div>
       </div>
-    </div>
-  </div>
+      </div>
 </template>
 
 
