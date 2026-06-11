@@ -3,6 +3,7 @@ import Browse from "../components/pages/Browse.vue";
 import Home from "../components/pages/Home.vue";
 import MyList from "../components/pages/MyList.vue";
 import Details from "../components/pages/Details.vue";
+import Success from "../components/pages/success.vue";
 
 
 const routes = [
@@ -21,6 +22,10 @@ const routes = [
     {
         path: "/details/:id",
         component: Details
+    },
+    {
+        path: "/success",
+        component: Success
     }
 ]
 
