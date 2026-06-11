@@ -74,12 +74,14 @@ const filterMovie = computed(() => {
       >
         <!-- IMAGE -->
         <div class="relative aspect-2/3 overflow-hidden">
-          <img
+
+            <img
             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             :src="item.image"
             :alt="item.title"
             loading="lazy"
           />
+          
 
           <!-- overlay -->
           <div
@@ -90,7 +92,7 @@ const filterMovie = computed(() => {
           <div
             class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
-            <router-link :to="`/details/${item.id}`"
+            <!-- <router-link :to="`/details/${item.id}`"
               class="w-12 h-12 rounded-full bg-orange-600 flex items-center justify-center shadow-lg"
             >
               <svg
@@ -100,10 +102,10 @@ const filterMovie = computed(() => {
               >
                 <path d="M8 5v14l11-7z" />
               </svg>
-            </router-link>
+            </router-link> -->
 
 
-            <router-link class="absolute lg:hidden text-white bg-red-600 px-1 rounded text-sm" to="">
+            <router-link class="absolute  text-white bg-red-600 px-5 py-2 rounded text-sm" :to="`/details/${item.id}`">
               <svg
                 class="w-6 h-6 text-white ml-1"
                 fill="currentColor"
@@ -111,6 +113,7 @@ const filterMovie = computed(() => {
               >
                 <path d="M8 5v14l11-7z" />
               </svg>
+
             </router-link>
           </div>
         </div>

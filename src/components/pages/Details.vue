@@ -30,8 +30,8 @@ onMounted(() => {
       </div>
 
       <!-- button back -->
-      <router-link class="bg-red-500 left-0 top-0 ml-2 mt-2 w-15 h-10 flex items-center justify-center rounded-xl absolute text-center" to="/browse">
-       <i class="bi text-white  bi-chevron-left"></i>
+      <router-link class="bg-red-500 left-0 top-0 ml-2 mt-2 lg:w-15 w-10 h-5 lg:h-10 flex items-center justify-center lg:rounded-xl rounded-md absolute text-center" to="/browse">
+       <p class="lg:text-base text-[10px]">Back</p>
       </router-link>
 
       <!-- Info -->
@@ -66,6 +66,7 @@ onMounted(() => {
         </button>
       </div>
     </div>
+
   </div>
   <div class="product-tranding container bg-black pt-5 pb-10 mx-auto">
       <!-- header -->
@@ -117,6 +118,7 @@ onMounted(() => {
                   </svg>
                 </div>
               </div>
+
             </div>
 
             <div class="p-4">
