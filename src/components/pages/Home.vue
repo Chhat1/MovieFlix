@@ -89,9 +89,9 @@ onMounted(() => {
           <!-- Buttons -->
           <div class="flex gap-4 mt-8">
             <router-link to="/browse"
-              class="bg-orange-600 cursor-pointer fontKH hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition"
+              class="bg-orange-600 cursor-pointer fontKH hover:bg-orange-700  text-white px-6 py-3 rounded-lg font-medium transition"
             >
-              <i class="bi bi-caret-right-fill"></i> មើលឥឡូវនេះ
+              <i class="bi bi-caret-right-fill "></i> មើលឥឡូវនេះ
             </router-link>
 
             <router-link to="/details"
@@ -126,13 +126,13 @@ onMounted(() => {
           រឿងកំពុងពេញនិយមថ្មីៗ
         </div>
         <div class="view-all fontKH">
-          <router-link to="/browse" class="text-white text-sm hover:text-orange-600 transition-all duration-300 ease-in-out">មើលទាំងអស់ <i class="bi bi-chevron-right"></i></router-link>
+          <router-link to="/browse" class="text-white text-sm hover:text-orange-600 transition-all duration-300 ease-in-out"> <i class="bi bi-chevron-right"></i></router-link>
         </div>
       </div>
 
       <!-- LIST CARD -->
       <div class="overflow-x-auto scrollbar-none w-full">
-        <div class="main-product lg:mt-5 mt-1 px-5 lg:px-0 flex w-max gap-5">
+        <div class="main-product lg:mt-1 mt-1 px-5 lg:px-0 flex w-max gap-5">
           <div
             v-for="item in productStore.products"
             :key="item.id"
@@ -193,17 +193,17 @@ onMounted(() => {
     <div class="product-tranding container pt-5 pb-10 mx-auto">
       <!-- header -->
       <div class="header flex justify-between items-center lg:px-0 px-5 py-5">
-        <div class="header-title fontKH text-white lg:text-md text-sm">
-          រឿងថ្មីៗ
+        <div class="header-title  text-white lg:text-md text-sm">
+          រឿង Anime
         </div>
-        <div class="view-all fontKH">
-          <router-link to="/browse" class="text-white text-sm hover:text-orange-600 transition-all duration-300 ease-in-out">មើលទាំងអស់ <i class="bi bi-chevron-right"></i></router-link>
+        <div class="view-all ">
+          <router-link to="/browse" class="text-white text-sm hover:text-orange-600 transition-all duration-300 ease-in-out"> <i class="bi bi-chevron-right"></i></router-link>
         </div>
       </div>
 
       <!-- LIST CARD -->
       <div class="overflow-x-auto scrollbar-none w-full">
-        <div class="main-product lg:mt-5 mt-1 px-5 lg:px-0 flex w-max gap-5">
+        <div class="main-product lg:mt-1 mt-1 px-5 lg:px-0 flex w-max gap-5">
           <div
             v-for="item in movies"
             :key="item.id"
@@ -221,7 +221,7 @@ onMounted(() => {
                 class="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent opacity-90"
               ></div>
 
-              <div
+              <router-link :to="`/details/${item.id}`"
                 class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               >
                 <div
@@ -235,7 +235,7 @@ onMounted(() => {
                     <path d="M8 5v14l11-7z" />
                   </svg>
                 </div>
-              </div>
+              </router-link>
 
               
             </div>
