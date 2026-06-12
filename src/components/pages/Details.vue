@@ -25,7 +25,7 @@ const handlePay = () =>{
   setTimeout(()=>{
     isLoading.value = false;
     router.push('/success')
-  },2000)
+  },3000)
 }
 
 </script>
@@ -87,6 +87,7 @@ const handlePay = () =>{
       </div>
     </div>
   </div>
+
   <!-- Modal payment -->
   <el-dialog>
     <dialog
