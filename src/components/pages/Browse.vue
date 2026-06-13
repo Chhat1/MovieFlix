@@ -63,7 +63,7 @@ const filterMovie = computed(() => {
 
     
 
-    <!-- MOVIE GRID -->
+    <!-- MOVIE card -->
     <div
       class="container mx-auto lg:py-10 px-5 flex flex-wrap py-10 justify-between"
     >
@@ -72,6 +72,12 @@ const filterMovie = computed(() => {
         :key="item.id"
         class="group relative lg:w-[23%] md:w-[48%] w-[48%]   shrink-0 rounded-2xl overflow-hidden cursor-pointer bg-slate-900 border border-gray-700 shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-orange-600 mb-5"
       >
+
+       <!-- add movie -->
+        <div class="bg-linear backdrop-blur-2xl bg-white/20 w-10 h-10 absolute top-2 inset-e-2  z-50 rounded-full flex justify-center items-center">
+          <i class="bim text-lg bi-heart pt-2 text-white"></i>
+        </div>
+        
         <!-- IMAGE -->
         <div class="relative aspect-2/3 overflow-hidden">
 

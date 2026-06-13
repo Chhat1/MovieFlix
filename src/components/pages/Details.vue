@@ -1,8 +1,8 @@
 <script setup>
 import { useRoute, useRouter } from "vue-router";
 import { movies } from "../../api/movies";
-import { useProductStore } from "../../Stores/product";
-import { onMounted, ref } from "vue";
+
+import { ref } from "vue";
 
 const route = useRoute();
 const router = useRouter();
@@ -11,10 +11,7 @@ const movie = movies.find((m) => m.id === movieId);
 
 console.log(movie);
 
-const productStore = useProductStore();
-onMounted(() => {
-  productStore.getProducts();
-});
+
 
 const isLoading = ref(false)
 
