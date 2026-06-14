@@ -82,54 +82,48 @@ const openSidebar = () => {
 
  
 
-  <!-- sidebar -->
+<!-- Sidebar -->
+<div
+  :class="isOpen ? 'h-54' : 'h-0'"
+  class="overflow-hidden transition-all ease-in-out duration-500 bg-zinc-900 border-t border-zinc-800 shadow-lg"
+>
+  <ul class="flex flex-col  p-4 gap-3">
 
-  <div
-    v-if="isOpen"
-    class="h-45 border-b border-b-slate-900 bg-black px-2 py-3"
-  >
-    <!-- search box -->
-    <div class="search relative lg:hidden mb-4">
-      <input
-        class="w-full py-1 px-3 pr-10 rounded-md border border-gray-400 outline-none text-orange-600 placeholder:text-gray-500 focus:border-orange-600"
-        type="search"
-        placeholder="Search movies..."
-      />
-
+    <li>
       <router-link
-        class="absolute right-3 top-1/2 -translate-y-1/2 text-orange-600 cursor-pointer"
-        to=""
+        to="/"
+        class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-300 hover:bg-orange-600 hover:text-white transition-all duration-300"
       >
-        <i class="bi bi-search"></i>
+        <i class="bi bi-house-door-fill text-lg"></i>
+        <span>Home</span>
       </router-link>
-    </div>
-    <div class="menu flex justify-end">
-      <ul class="menu-links flex-column gap-5">
-        <li class="mb-3">
-          <router-link
-            class="link text-gray-300 text-sm transition-all duration-300 hover:text-orange-600 cursor-pointer"
-            to="/"
-            ><i class="bi bi-house"></i> ទំព័រដើម</router-link
-          >
-        </li>
-        <li class="mb-3">
-          <router-link
-            class="link text-gray-300 text-sm transition-all duration-300 hover:text-orange-600 cursor-pointer"
-            to="/browse"
-          >
-            <i class="bi bi-view-list"></i> មើលរឿង</router-link
-          >
-        </li>
-        <li>
-          <router-link
-            class="link text-gray-300 text-sm transition-all duration-300 hover:text-orange-600 cursor-pointer"
-            to="/mylist"
-            ><i class="bi bi-heart"></i> ចូលចិត្ត</router-link
-          >
-        </li>
-      </ul>
-    </div>
-  </div>
+    </li>
+
+    <li>
+      <router-link
+        to="/browse"
+        class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-300 hover:bg-orange-600 hover:text-white transition-all duration-300"
+      >
+        <i class="bi bi-film text-lg"></i>
+        <span>Browse</span>
+      </router-link>
+    </li>
+
+    <li>
+      <router-link
+        to="/mylist"
+        class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-300 hover:bg-orange-600 hover:text-white transition-all duration-300"
+      >
+        <i class="bi bi-heart-fill text-lg"></i>
+        <span>My List</span>
+      </router-link>
+    </li>
+
+  </ul>
+</div>
+  
+
+
 </template>
 
 <style scoped>

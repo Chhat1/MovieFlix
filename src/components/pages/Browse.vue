@@ -74,9 +74,9 @@ const filterMovie = computed(() => {
       >
 
        <!-- add movie -->
-        <div class="bg-linear backdrop-blur-2xl bg-white/20 w-10 h-10 absolute top-2 inset-e-2  z-50 rounded-full flex justify-center items-center">
+        <button class="bg-linear backdrop-blur-2xl bg-white/20 w-10 h-10 absolute top-2 inset-e-2  z-50 rounded-full flex justify-center items-center">
           <i class="bim text-lg bi-heart pt-2 text-white"></i>
-        </div>
+        </button>
         
         <!-- IMAGE -->
         <div class="relative aspect-2/3 overflow-hidden">
