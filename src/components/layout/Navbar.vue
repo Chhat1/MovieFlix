@@ -12,7 +12,7 @@ const openSidebar = () => {
 </script>
 
 <template>
-  <header class="bg-black sticky top-0 z-50 border-b border-b-gray-900">
+  <header class="bg-black sticky top-0 z-100 border-b border-b-gray-900">
     <nav
       class="container mx-auto navbar flex justify-between items-center py-5 lg:px-0 px-5"
     >
