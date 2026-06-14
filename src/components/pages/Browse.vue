@@ -1,6 +1,7 @@
 <script setup>
-import { computed, ref } from "vue";
-import { movies } from "../../api/movies";
+import { computed, onMounted, ref } from "vue";
+import { useMovieStore } from "../../Stores/movieStore";
+
 
 
 // selected category
@@ -9,19 +10,23 @@ const selectedCategory = ref("All");
 // categories (auto generate)
 const categories = computed(() => [
   "All",
-  ...new Set(movies.map((m) => m.category)),
+  ...new Set(movieStore.moviesStore.map((m) => m.category)),
 ]);
 
 // filtered movies
 const filterMovie = computed(() => {
   if (selectedCategory.value === "All") {
-    return movies;
+    return movieStore.moviesStore;
   }
-  return movies.filter(
+  return movieStore.moviesStore.filter(
     (movie) => movie.category === selectedCategory.value
   );
 });
 
+const movieStore = useMovieStore()
+onMounted(()=>{
+  movieStore.getMovie()
+})
 
 
 

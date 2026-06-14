@@ -6,6 +6,7 @@ import { ref } from "vue";
 
 const route = useRoute();
 const router = useRouter();
+
 const movieId = parseInt(route.params.id);
 const movie = movies.find((m) => m.id === movieId);
 
@@ -35,7 +36,7 @@ const handlePay = () =>{
     <div class="lg:container lg:mx-auto lg:flex flex-col md:flex-row gap-10">
       <!-- Trailer -->
       <div
-        class="lg:w-full w-full overflow-hidden lg:rounded-2xl rounded-none border border-gray-700 shadow-2xl"
+        class="lg:w-full w-full overflow-hidden lg:rounded-2xl rounded-none border lg:border-gray-700 border-black shadow-2xl"
       >
         <video controls autoplay muted class="w-full aspect-video object-cover">
           <source :src="movie.thriller" type="video/mp4" />

@@ -1,6 +1,7 @@
 <script setup>
-import {ref } from "vue";
-import { movies } from "../../api/movies";
+
+import {onMounted, ref } from "vue";
+import { useMovieStore } from "../../Stores/movieStore";
 
 
 const currentSlide = ref(0);
@@ -20,6 +21,8 @@ const slides = [
   },
 ];
 
+
+
 const nextSlide = () => {
   currentSlide.value = (currentSlide.value + 1) % slides.length;
 };
@@ -29,9 +32,11 @@ const prevSlide = () => {
 };
 
 
+const movieStore = useMovieStore()
 
-
-
+onMounted(()=>{
+  movieStore.getMovie()
+})
 
 </script>
 
@@ -142,7 +147,7 @@ const prevSlide = () => {
       >
 
         <div
-          v-for="item in movies.slice(0,4)"
+          v-for="item in movieStore.moviesStore.slice(0,4)"
           :key="item.id"
           class="group relative lg:w-[23%] md:w-[48%] w-[48%] shrink-0  rounded-2xl overflow-hidden cursor-pointer bg-slate-900 border border-gray-700 shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-orange-600 mb-5"
         >
