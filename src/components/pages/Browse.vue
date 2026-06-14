@@ -2,7 +2,7 @@
 import { computed, onMounted, ref } from "vue";
 import { useMovieStore } from "../../Stores/movieStore";
 
-
+const favoriteStore = useMovieStore()
 
 // selected category
 const selectedCategory = ref("All");
@@ -79,9 +79,19 @@ onMounted(()=>{
       >
 
        <!-- add movie -->
-        <button class="bg-linear backdrop-blur-2xl bg-white/20 w-10 h-10 absolute top-2 inset-e-2  z-50 rounded-full flex justify-center items-center">
-          <i class="bim text-lg bi-heart pt-2 text-white"></i>
-        </button>
+            <button
+              @click="favoriteStore.toggleFavorite(item)"
+              class="bg-linear backdrop-blur-2xl bg-white/20 w-10 h-10 absolute top-2 inset-e-2 z-50 rounded-full cursor-pointer flex justify-center items-center"
+            >
+              <i
+                :class="
+                  favoriteStore.isFavorite(item.id)
+                    ? 'bi-heart-fill text-red-500'
+                    : 'bi-heart text-white'
+                "
+                class="bim text-lg bi-heart-fill pt-2"
+              ></i>
+            </button>
         
         <!-- IMAGE -->
         <div class="relative aspect-2/3 overflow-hidden">
@@ -103,19 +113,7 @@ onMounted(()=>{
           <div
             class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
-            <!-- <router-link :to="`/details/${item.id}`"
-              class="w-12 h-12 rounded-full bg-orange-600 flex items-center justify-center shadow-lg"
-            >
-              <svg
-                class="w-6 h-6 text-white ml-1"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </router-link> -->
-
-
+            
             <router-link class="absolute  text-white bg-red-600 px-5 py-2 rounded text-sm" :to="`/details/${item.id}`">
               <svg
                 class="w-6 h-6 text-white ml-1"

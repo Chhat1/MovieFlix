@@ -34,6 +34,8 @@ const prevSlide = () => {
 
 const movieStore = useMovieStore()
 
+const favoriteStore = useMovieStore()
+
 onMounted(()=>{
   movieStore.getMovie()
 })
@@ -153,8 +155,8 @@ onMounted(()=>{
         >
 
        <!-- add movie -->
-        <button  class="bg-linear backdrop-blur-2xl bg-white/20 w-10 h-10 absolute top-2 inset-e-2  z-50 rounded-full cursor-pointer flex justify-center items-center">
-          <i class="bim text-lg bi-heart pt-2 text-white"></i>
+        <button @click="favoriteStore.toggleFavorite(item)" class="bg-linear backdrop-blur-2xl bg-white/20 w-10 h-10 absolute top-2 inset-e-2  z-50 rounded-full cursor-pointer flex justify-center items-center">
+          <i :class="favoriteStore.isFavorite(item.id) ? 'bi-heart-fill text-red-500' : 'bi-heart text-white'" class="bim text-lg bi-heart-fill  pt-2"></i>
         </button>
 
         
