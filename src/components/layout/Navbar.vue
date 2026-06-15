@@ -112,8 +112,8 @@ const openSidebar = () => {
 
 <!-- Sidebar -->
 <div
-  :class="isOpen ? 'h-54' : 'h-0'"
-  class="overflow-hidden transition-all ease-in-out duration-500 bg-zinc-900 border-t border-zinc-800 shadow-lg"
+  :class="isOpen ? 'h-50' : 'h-0'"
+  class="overflow-hidden  transition-all ease-in-out duration-500 bg-black border-t border-zinc-800 shadow-lg"
 >
   <ul class="flex flex-col  p-4 gap-3">
 
