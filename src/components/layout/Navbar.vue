@@ -1,6 +1,9 @@
 <script setup>
 import { ref} from "vue";
 import { movies } from "../../api/movies";
+import { useMovieStore } from "../../Stores/movieStore";
+
+const countFavorite = useMovieStore()
 
 const isOpen = ref(false);
 
@@ -44,10 +47,11 @@ const openSidebar = () => {
           </li>
           <li>
             <router-link
-              class="link text-gray-300 text-sm transition-all duration-300 hover:text-orange-600 cursor-pointer"
+              class="link relative text-gray-300 text-sm transition-all duration-300 hover:text-orange-600 cursor-pointer"
               to="/mylist"
               ><i class="bi bi-heart"></i> ចូលចិត្ត</router-link
             >
+            
           </li>
         </ul>
       </div>
