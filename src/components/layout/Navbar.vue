@@ -31,25 +31,49 @@ const openSidebar = () => {
       <div class="menu lg:block hidden">
         <ul class="menu-links flex gap-5">
           <li>
-            <router-link
-              class="link text-gray-300 text-sm transition-all duration-300 hover:text-orange-600 cursor-pointer"
+            <router-link v-slot="{isActive}"
               to="/"
-              ><i class="bi bi-house"></i> ទំព័រដើម</router-link
-            >
+              >
+              <span :class="[
+                'pb-2 border-b-2 transition-all duration-300',
+                isActive
+                ? 'border-red-500 text-red-500' : 'border-transparent text-white'
+              ]">
+
+                <i class="bi bi-house"></i> ទំព័រដើម
+
+              </span>
+              
+              </router-link>
           </li>
+
           <li>
             <router-link
-              class="link text-gray-300 text-sm transition-all duration-300 hover:text-orange-600 cursor-pointer"
+              v-slot="{isActive}"
               to="/browse"
             >
-              <i class="bi bi-view-list"></i> មើលរឿង</router-link
-            >
+              <span :class="[
+              'pb-2 border-b-2 transition-all duration-300',
+              isActive ? 'border-red-500 text-red-500' : 'border-transparent text-white'
+              ]">
+                <i class="bi bi-view-list"></i> មើលរឿង 
+              </span>
+              
+              </router-link>
           </li>
           <li>
             <router-link
-              class="link relative text-gray-300 text-sm transition-all duration-300 hover:text-orange-600 cursor-pointer"
+              v-slot="{isActive}"
               to="/mylist"
-              ><i class="bi bi-heart"></i> ចូលចិត្ត</router-link
+              >
+              <span :class="[
+                'pb-2 border-b-2 transition-all duration-300',
+                isActive ? 'border-red-500 text-red-500' : 'border-transparent text-white'
+              ]">
+                <i class="bi bi-heart"></i> ចូលចិត្ត
+              </span>
+             
+              </router-link
             >
             
           </li>
